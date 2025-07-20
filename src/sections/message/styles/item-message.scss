@@ -1,0 +1,25 @@
+.item-message {
+  &__container {
+    padding: 31px 25px 4px;
+    border-radius: 20px;
+    background-color: $message-item-bg;
+  }
+
+  &__avatar {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  &__txt {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 22px;
+    color: $message-color-txt;
+  }
+
+  &__content {
+    height: 45px;
+  }
+}

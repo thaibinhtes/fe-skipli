@@ -1,0 +1,30 @@
+.button {
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 400;
+
+
+  &.\--primary {
+    background-color: $btn-bg-primary;
+    color: $btn-color-primary;
+    font-size: 13px;
+    line-height: 19px;
+  }
+
+
+  &.\--primary-action {
+    background-color: $btn-bg-primary-action;
+  }
+
+  &.\--danger {
+    background-color: $btn-bg-danger;
+  }
+
+  &.\--primary-action,
+  &.\--danger {
+    font-size: 12px;
+    line-height: 17px;
+    color: $btn-color-primary;
+  }
+}

@@ -1,0 +1,67 @@
+$black-100: #000000;
+$black-200: #171A1F;
+$black-300: #120F281F;
+$black-400: #171A1F12;
+$black-500: #171A1F1F;
+
+$blue-100: #006AFF;
+$blue-200: #2C7BE5;
+$blue-300: #1D80B6;
+$blue-400: #E7F1FF;
+
+$gray-100: #565D6D;
+$gray-200: #A0A0A0;
+$gray-300: #BDC1CA;
+$gray-400: #D9D9D9;
+$gray-500: #9095A1;
+$gray-600: #F1F1F1;
+$gray-700: #D4D4D4;
+$gray-800: #F6F6F6;
+
+$green-100: #E3FEF3;
+$green-200: #16D583;
+
+$red-100: #EA5656;
+
+$white-100: #ffffff;
+$white-200: #FAFAFA;
+
+
+$box-shadow-base-card: $black-500;
+
+$border-base-input: $gray-500;
+
+$base-input-color-label: $black-100;
+
+$btn-bg-primary: $blue-100;
+$btn-color-primary: $white-100;
+$btn-bg-primary-action: $blue-200;
+$btn-bg-danger: $red-100;
+$btn-color-danger: $white-100;
+$btn-color-primary: $white-100;
+
+$bg-gray: $gray-400;
+
+$text-color-desc: $gray-100;
+$text-color-link: $blue-100;
+$text-color-title-page: $black-100;
+$text-status-bg-active: $green-100;
+$text-status-color-active: $green-200;
+$text-color-title-modal: $black-100;
+
+$sidebar-border-active-item: $blue-200;
+$sidebar-bg-active-item: $blue-400;
+$sidebar-color-txt: $blue-200;
+
+$table-bg-head: $black-500;
+$table-color-txt: $black-200;
+$table-box-shadow-head: $black-500;
+$table-color-title: $black-100;
+$table-border-row: $gray-600;
+
+$modal-bg: $gray-700;
+
+$message-item-bg: $gray-800;
+$message-color-txt: $black-100;
+$message-bg-content: $gray-800;
+$message-bg-chat: $gray-400;

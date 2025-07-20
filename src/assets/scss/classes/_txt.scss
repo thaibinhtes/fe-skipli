@@ -1,0 +1,50 @@
+.title {
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 19px;
+}
+
+
+.text-desc {
+  color: $text-color-desc;
+  font-size: 13px;
+  line-height: 22px;
+}
+
+.text-link {
+  color: $text-color-link;
+}
+
+.title-page {
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 22px;
+  color: $text-color-title-page;
+}
+
+.title-table {
+  font-size: 20px;
+  line-height: 22px;
+  font-weight: 700;
+  color: $table-color-title;
+}
+
+.text-status {
+  padding: 6.45px 43.49px 4.55px 41.51px;
+  border-radius: 3px;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 17px;
+
+  &.\--active {
+    background-color: $text-status-bg-active;
+    color: $text-status-color-active;
+  }
+}
+
+.title-modal {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 17px;
+  color: $text-color-title-modal;
+}

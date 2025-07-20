@@ -1,0 +1,32 @@
+.base-table {
+  color: $table-color-txt;
+  background-color: $white-100;
+
+  &__header {
+    padding: 23.45px 0;
+  }
+
+  &__table {
+    width: 100%;
+    border-collapse: collapse;
+    color: $table-color-txt;
+    font-weight: 400;
+  }
+
+  & td {
+    padding: 20.45px 0 18.55px 0;
+  }
+
+  & th {
+    background-color: $table-bg-head;
+    font-weight: bold;
+    padding: 11px 15px;
+    text-align: left;
+
+  }
+
+  & tr {
+    border-bottom: 1px solid $table-border-row;
+  }
+
+}

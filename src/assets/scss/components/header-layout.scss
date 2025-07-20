@@ -1,0 +1,13 @@
+.header-layout {
+  .avatar {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    overflow: hidden;
+    padding: 0;
+  }
+
+  &__container {
+    padding: 41px 72px 51.55px 0;
+  }
+}

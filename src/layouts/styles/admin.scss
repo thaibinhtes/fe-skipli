@@ -1,0 +1,14 @@
+.layout {
+  &__sidebar {
+    width: 19.29%;
+    position: fixed;
+  }
+
+  &__content {
+    padding-left: 19.29%;
+  }
+
+  &__container {
+    padding: 0 25px 0 23.5px;
+  }
+}

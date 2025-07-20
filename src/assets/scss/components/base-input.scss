@@ -1,0 +1,19 @@
+.base-input {
+  &__container {
+    padding: 13.5px 16px 12.5px;
+    border: 1px solid $border-base-input;
+    border-radius: 4px;
+
+    input {
+      outline: none;
+    }
+  }
+
+  &__label {
+    padding-bottom: 13px;
+    font-size: 15px;
+    line-height: 17px;
+    color: $base-input-color-label;
+    font-weight: 400;
+  }
+}

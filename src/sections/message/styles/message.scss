@@ -1,0 +1,37 @@
+.message-view {
+  $WIDTH_LIST_MESSAGE: 339px;
+  $HEIGHT_INPUT_CHAT: 68px;
+
+  &__list {
+    width: $WIDTH_LIST_MESSAGE;
+  }
+
+  &__main {
+    width: calc(100% - $WIDTH_LIST_MESSAGE);
+    background-color: $message-bg-content;
+    border-radius: 20px;
+    padding-bottom: $HEIGHT_INPUT_CHAT;
+    position: relative;
+    z-index: 90;
+  }
+
+  &__input-chat {
+    left: 0;
+    bottom: 0;
+    height: $HEIGHT_INPUT_CHAT;
+    z-index: 91;
+    background-color: $message-bg-chat;
+    border-radius: 0 0 20px 20px;
+
+    & .base-input {
+      height: 38px;
+
+      &__container {
+        border-color: transparent;
+        padding-top: 30px;
+        padding-bottom: 0;
+        padding-left: 55px;
+      }
+    }
+  }
+}

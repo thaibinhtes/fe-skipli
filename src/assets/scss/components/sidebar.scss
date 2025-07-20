@@ -1,0 +1,32 @@
+.sidebar {
+  width: 100%;
+
+  &__container {
+    padding: 24px 0 0 14px;
+  }
+
+  &__header {
+    padding: 0 31px 0 11px;
+    margin-bottom: 91px;
+  }
+
+  &__nav {
+    list-style: none;
+  }
+
+  &__item {
+    padding: 18px;
+    border-right: 3px solid transparent;
+
+    &,
+    & a {
+      color: $sidebar-color-txt;
+    }
+
+    &.\--active,
+    &:hover {
+      border-color: $sidebar-border-active-item;
+      background-color: $sidebar-bg-active-item;
+    }
+  }
+}
