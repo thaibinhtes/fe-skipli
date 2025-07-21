@@ -1,3 +1,5 @@
+@use '../styles/color' as color;
+
 .button {
   padding: 10px;
   border-radius: 4px;
@@ -6,25 +8,31 @@
 
 
   &.\--primary {
-    background-color: $btn-bg-primary;
-    color: $btn-color-primary;
+    background-color: color.$btn-bg-primary;
+    color: color.$btn-color-primary;
     font-size: 13px;
     line-height: 19px;
   }
 
 
   &.\--primary-action {
-    background-color: $btn-bg-primary-action;
+    background-color: color.$btn-bg-primary-action;
   }
 
   &.\--danger {
-    background-color: $btn-bg-danger;
+    background-color: color.$btn-bg-danger;
   }
 
   &.\--primary-action,
   &.\--danger {
     font-size: 12px;
     line-height: 17px;
-    color: $btn-color-primary;
+    color: color.$btn-color-primary;
+  }
+
+  &.\--out-primary {
+    background-color: color.$btn-bg-out-primary;
+    border: 1px solid color.$btn-border-out-primary;
+    color: color.$btn-color-out-primary;
   }
 }

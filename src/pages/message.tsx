@@ -1,4 +1,4 @@
-import MessageView from "@/sections/message/MessageView"
+import MessageView from "../sections/message/MessageView"
 
 const Page = () => {
   return <>

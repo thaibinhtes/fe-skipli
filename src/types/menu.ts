@@ -1,5 +1,5 @@
-export type Menu = {
+export type MenuType = {
   title: string;
   link: string;
-  active: boolean;
+  active?: boolean;
 }

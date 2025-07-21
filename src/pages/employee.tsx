@@ -1,6 +1,18 @@
+import { useEffect } from "react";
 import TableEmployee from "../sections/employee/TableEmployee";
-
+import useEmployeeStore from '../store/employee'
 const Page = () => {
+
+  const { fetchEmployees } = useEmployeeStore()
+
+  const onFetchEmployee = async () => {
+    await fetchEmployees()
+  }
+
+  useEffect(() => {
+    onFetchEmployee()
+  }, [onFetchEmployee])
+
   return <>
     <title>Manage Employee</title>
     <div className="page-emloyee page">

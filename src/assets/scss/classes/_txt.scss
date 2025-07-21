@@ -1,3 +1,5 @@
+@use '../styles/color' as color;
+
 .title {
   font-weight: 700;
   font-size: 25px;
@@ -6,27 +8,27 @@
 
 
 .text-desc {
-  color: $text-color-desc;
+  color: color.$text-color-desc;
   font-size: 13px;
   line-height: 22px;
 }
 
 .text-link {
-  color: $text-color-link;
+  color: color.$text-color-link;
 }
 
 .title-page {
   font-weight: 500;
   font-size: 25px;
   line-height: 22px;
-  color: $text-color-title-page;
+  color: color.$text-color-title-page;
 }
 
 .title-table {
   font-size: 20px;
   line-height: 22px;
   font-weight: 700;
-  color: $table-color-title;
+  color: color.$table-color-title;
 }
 
 .text-status {
@@ -37,8 +39,8 @@
   line-height: 17px;
 
   &.\--active {
-    background-color: $text-status-bg-active;
-    color: $text-status-color-active;
+    background-color: color.$text-status-bg-active;
+    color: color.$text-status-color-active;
   }
 }
 
@@ -46,5 +48,5 @@
   font-weight: 700;
   font-size: 40px;
   line-height: 17px;
-  color: $text-color-title-modal;
+  color: color.$text-color-title-modal;
 }

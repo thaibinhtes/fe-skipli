@@ -1,3 +1,5 @@
+@use '../styles/color' as color;
+
 .bg-gray {
-  background-color: $bg-gray;
+  background-color: color.$bg-gray;
 }

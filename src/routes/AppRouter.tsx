@@ -1,35 +1,45 @@
 import { Routes, Route } from 'react-router-dom';
-import { lazy, Suspense } from 'react';
-import { SIGN_IN, HOME, EMPLOYEE, MESSAGE } from './routes.d';
+import { lazy, Suspense, useMemo } from 'react';
+import { SIGN_IN, HOME, EMPLOYEE, MESSAGE, TASK } from './routes.d';
 import { RoleProtectedRoute } from './ProtectedRoute';
+import { getTokenAuth } from '../utils';
+import BaseLoading from '../components/BaseLoading';
 
 // Lazy imports
-const HomePage = lazy(() => import('@/pages/home'));
-const SignInPage = lazy(() => import('@/pages/sign-in'));
-const DashboardPage = lazy(() => import('@/pages/dashboard'));
-const LayoutAdmin = lazy(() => import('@/layouts/admin'));
-const EmployeePage = lazy(() => import('@/pages/employee'));
-const MessagePage = lazy(() => import('@/pages/message'));
+const SignInPage = lazy(() => import('../pages/sign-in'));
+const LayoutAdmin = lazy(() => import('../layouts/admin'));
+const EmployeePage = lazy(() => import('../pages/employee'));
+const MessagePage = lazy(() => import('../pages/message'));
+const TaskPage = lazy(() => import('../pages/task'));
+
+import { useLocation } from 'react-router-dom';
 
 export default function AppRouter() {
+  const location = useLocation();
+
+  const isLogin = useMemo(() => {
+    const token = getTokenAuth()
+
+    return token ? true : false
+  }, [location])
   return (
-    <Suspense fallback={<div>Loading...</div>}>
+    <Suspense fallback={<BaseLoading />}>
       <Routes>
         <Route
           path={HOME}
           element={
             <RoleProtectedRoute
-              isAuthenticated={false} // ✅ Change this dynamically later
+              isAuthenticated={isLogin}
               allowedRoles={['admin']}
-              userRole="admin" // ✅ This must match allowedRoles or access will be denied
+              userRole="admin"
             >
               <LayoutAdmin />
             </RoleProtectedRoute>
           }
         >
-          <Route index element={<DashboardPage />} />
-          <Route path={EMPLOYEE} element={<EmployeePage />} />
+          <Route index path={EMPLOYEE} element={<EmployeePage />} />
           <Route path={MESSAGE} element={<MessagePage />} />
+          <Route path={TASK} element={<TaskPage />}></Route>
         </Route>
 
         {/* Public */}

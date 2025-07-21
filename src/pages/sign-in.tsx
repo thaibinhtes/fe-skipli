@@ -1,13 +1,15 @@
-import SignInView from "@/sections/auth/SignInView";
+import SignInView from "../sections/auth/SignInView";
 import { Navigate } from "react-router-dom";
-import { HOME } from "@/routes/routes.d";
+import { HOME } from "../routes/routes.d";
 import { useEffect, useState } from "react";
+import { getTokenAuth } from "../utils";
 
 const Page = () => {
   const [redirect, setRedirect] = useState(false);
 
+
   useEffect(() => {
-    const token = localStorage.getItem("jwt-token");
+    const token = getTokenAuth()
     if (token) {
       setRedirect(true);
     }

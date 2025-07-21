@@ -4,12 +4,13 @@ const HOME = '/'
 const NOT_FOUND = '/404'
 const EMPLOYEE = '/employee'
 const MESSAGE = '/message'
-
+const TASK = '/task'
 export {
   SIGN_IN,
   SIGN_UP,
   HOME,
   NOT_FOUND,
   EMPLOYEE,
-  MESSAGE
+  MESSAGE,
+  TASK
 }

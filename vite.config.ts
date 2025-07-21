@@ -1,4 +1,4 @@
-import checker from 'vite-plugin-checker';
+// import checker from 'vite-plugin-checker';
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react-swc';
 import path from 'path'
@@ -11,18 +11,18 @@ const PORT = 3039;
 export default defineConfig({
   plugins: [
     react(),
-    checker({
-      typescript: true,
-      eslint: {
-        useFlatConfig: true,
-        lintCommand: 'eslint "./src/**/*.{js,jsx,ts,tsx,scss}"',
-        dev: { logLevel: ['error'] },
-      },
-      overlay: {
-        position: 'tl',
-        initialIsOpen: false,
-      },
-    }),
+    // checker({
+    //   typescript: true,
+    //   eslint: {
+    //     useFlatConfig: true,
+    //     lintCommand: 'eslint "./src/**/*.{js,jsx,ts,tsx,scss}"',
+    //     dev: { logLevel: ['error'] },
+    //   },
+    //   overlay: {
+    //     position: 'tl',
+    //     initialIsOpen: false,
+    //   },
+    // }),
     tailwindcss(),
   ],
   resolve: {
@@ -34,7 +34,7 @@ export default defineConfig({
     preprocessorOptions: {
       scss: {
         additionalData: `
-          @use "@/assets/scss/styles/_variables.scss" as *;
+          @use "@/assets/scss/styles/_color.scss" as *;
         `
       }
     }

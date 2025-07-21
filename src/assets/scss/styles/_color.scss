@@ -8,6 +8,8 @@ $blue-100: #006AFF;
 $blue-200: #2C7BE5;
 $blue-300: #1D80B6;
 $blue-400: #E7F1FF;
+$blue-500: #3498db;
+$blue-600: #F3F8FF;
 
 $gray-100: #565D6D;
 $gray-200: #A0A0A0;
@@ -39,6 +41,9 @@ $btn-bg-primary-action: $blue-200;
 $btn-bg-danger: $red-100;
 $btn-color-danger: $white-100;
 $btn-color-primary: $white-100;
+$btn-bg-out-primary: $blue-600;
+$btn-border-out-primary: $blue-200;
+$btn-color-out-primary: $blue-300;
 
 $bg-gray: $gray-400;
 
@@ -65,3 +70,6 @@ $message-item-bg: $gray-800;
 $message-color-txt: $black-100;
 $message-bg-content: $gray-800;
 $message-bg-chat: $gray-400;
+
+$base-loading-bg: $black-400;
+$base-loading-border-spinner: $blue-500;

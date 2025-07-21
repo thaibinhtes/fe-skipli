@@ -4,8 +4,9 @@ export type BaseModalType = React.ComponentProps<'div'> & {
   title: string;
   show: boolean;
   onClose(): void;
+  size?: number;
 }
-const BaseModal = ({ children, show, title, onClose, ...other }: { children: React.ReactNode } & BaseModalType) => {
+const BaseModal = ({ children, show, title, onClose, size, ...other }: { children: React.ReactNode } & BaseModalType) => {
 
   const handleOverlayClick = (e: React.MouseEvent<HTMLDivElement>) => {
     if (e.target === e.currentTarget) {
@@ -15,7 +16,11 @@ const BaseModal = ({ children, show, title, onClose, ...other }: { children: Rea
 
 
   return show ? <div className="base-modal fixed w-full h-full" {...other}>
-    <div onClick={handleOverlayClick} className="base-modal__container">
+    <div onClick={handleOverlayClick} className="base-modal__container"
+      style={size ? {
+        width: `${size}px`
+      } : {}}
+    >
       <div className="base-modal__header">
         <h4 className="base-modal__title title-modal text-center">
           {title}

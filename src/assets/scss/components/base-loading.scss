@@ -1,0 +1,29 @@
+.base-loading {
+  align-items: center;
+  justify-content: center;
+  background-color: $base-loading-bg;
+
+  &__container {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid $white-100;
+    border-top-color: $base-loading-border-spinner;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+
+  }
+}
+
+
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

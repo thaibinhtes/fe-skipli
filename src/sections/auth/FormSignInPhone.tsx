@@ -1,10 +1,10 @@
 import { Link } from 'react-router-dom';
-import BaseInput from '@/components/BaseInput';
-import BaseCard from '@/components/BaseCard';
+import BaseInput from '../../components/BaseInput';
+import BaseCard from '../../components/BaseCard';
 
 type FormSignInType = {
   phone: string;
-  onChangePhone(phone: string): Function;
+  onChangePhone(value: string): void;
   onSubmit(): void;
   onBack(): void;
 }
@@ -26,7 +26,7 @@ const FormSignInPhone = ({ phone, onChangePhone, onSubmit, onBack }: FormSignInT
           type="text"
           value={phone}
           placeholder="Your Phone Number"
-          onChange={onChangeValue}
+          change={(value: string) => onChangeValue(value)}
         />
 
         <button

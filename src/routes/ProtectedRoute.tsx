@@ -1,5 +1,5 @@
 import { Navigate } from 'react-router-dom'
-import { SIGN_IN, NOT_FOUND } from './routes.d';
+import { SIGN_IN } from './routes.d';
 import type React from 'react';
 
 type RoleProtectedRouteProps = {
@@ -9,8 +9,7 @@ type RoleProtectedRouteProps = {
   userRole: string
 }
 
-export function RoleProtectedRoute({ children, isAuthenticated, allowedRoles, userRole }: RoleProtectedRouteProps) {
+export function RoleProtectedRoute({ children, isAuthenticated }: RoleProtectedRouteProps) {
   if (!isAuthenticated) return <Navigate to={SIGN_IN} replace />
-  // if (!allowedRoles.includes(userRole)) return <Navigate to={NOT_FOUND} replace />
   return children
 }

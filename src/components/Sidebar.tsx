@@ -1,26 +1,23 @@
-import "@/assets/scss/components/sidebar.scss";
-import { MenuType } from '@/types/menu';
+import "../assets/scss/components/sidebar.scss";
+import { type MenuType } from '../types/menu';
 import { Link } from "react-router-dom";
-import { EMPLOYEE, MESSAGE } from "@/routes/routes.d";
+import { useLocation } from 'react-router-dom';
+import { useMemo } from "react";
 
-const Sidebar = () => {
-  let menus: Array<MenuType> = [
-    {
-      title: 'Manage Employee',
-      active: true,
-      link: EMPLOYEE
-    },
-    {
-      title: 'Manage Task',
-      active: false,
-      link: '/task'
-    },
-    {
-      title: 'Message',
-      active: false,
-      link: MESSAGE
-    }
-  ]
+type SidebarProp = {
+  menuData: MenuType[]
+}
+
+const Sidebar = ({ menuData }: SidebarProp) => {
+  const location = useLocation();
+
+  const menus = useMemo(() => {
+    return menuData.map(menu => ({
+      ...menu,
+      active: location.pathname === menu.link
+    }))
+  }, [location.pathname]);
+
   return <div className="sidebar">
     <div className="sidebar__container">
       <div className="sidebar__header">

@@ -1,10 +1,10 @@
-@import "./styles/color";
-@import "./styles/mixins";
-@import "./styles/variables";
-@import './classes/txt';
-@import './classes/button';
-@import './classes/backgroud';
-@import './classes/page';
+@use "./styles/color" as color;
+@use "./styles/font" as font;
+@use "./styles/mixins" as *;
+@use './classes/txt' as *;
+@use './classes/button' as *;
+@use './classes/backgroud' as *;
+@use './classes/page' as *;
 
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
 
@@ -16,5 +16,5 @@ html,
   font-family: 'Manrope', sans-serif;
   font-weight: 400;
   font-style: normal;
-  @include font-style($font-regular, $font-size-regular, $font-weight-regular, $font-line-height-regular, $font-color-regular);
+  @include font-style(font.$font-regular, font.$font-size-regular, font.$font-weight-regular, font.$font-line-height-regular, color.$gray-100);
 }

@@ -1,4 +1,4 @@
-import SignUpView from "@/sections/auth/SignUpView";
+import SignUpView from "../sections/auth/SignUpView";
 
 const Page = () => {
   return <>

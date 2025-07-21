@@ -41,10 +41,10 @@ const MessageView = () => {
       }}>
         <div className="message-view__input-chat absolute w-full">
           <BaseInput
-            typet="text"
+            type='text'
             value={message}
             placeholder='Reply Message'
-            onChange={(message: string) => setMessage(message)}
+            change={(message: string) => setMessage(message)}
             onDragEnter={() => onSendMessage()}
           />
         </div>
