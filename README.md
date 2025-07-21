@@ -10,8 +10,9 @@ Clone dự án về máy:
 ```bash
 git clone https://github.com/thaibinhtes/fe-skipli
 cd fe-skipli
+```
 
-#Cài đặt dependencies:
+## **Cài đặt dependencies**
 yarn install
 # hoặc
 npm install
@@ -21,12 +22,12 @@ yarn dev
 # hoặc
 npm run dev
 
-#Build Production
+## **Production**
 yarn build
 # hoặc
 npm run build
 
-#Cấu trúc thư mục
+## **Cấu trúc thư mục**
 src/
   assets/        # Chứa file SCSS, ảnh, icon
   components/    # Component tái sử dụng
