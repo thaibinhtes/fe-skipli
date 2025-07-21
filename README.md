@@ -13,19 +13,25 @@ cd fe-skipli
 ```
 
 ## **Cài đặt dependencies**
+```bash
 yarn install
 # hoặc
 npm install
+```
 
 #Chạy dự án (Development)
+```bash
 yarn dev
 # hoặc
 npm run dev
+```
 
 ## **Production**
+```bash
 yarn build
 # hoặc
 npm run build
+```
 
 ## **Cấu trúc thư mục**
 src/
