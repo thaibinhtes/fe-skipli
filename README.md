@@ -10,7 +10,7 @@ Clone dự án về máy:
 ```bash
 git clone https://github.com/thaibinhtes/fe-skipli
 cd fe-skipli
-copy .env.example .env
+cp .env.example .env
 ```
 
 ## **Cài đặt dependencies**
