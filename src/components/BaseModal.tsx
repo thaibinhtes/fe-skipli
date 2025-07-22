@@ -15,8 +15,8 @@ const BaseModal = ({ children, show, title, onClose, size, ...other }: { childre
   };
 
 
-  return show ? <div className="base-modal fixed w-full h-full" {...other}>
-    <div onClick={handleOverlayClick} className="base-modal__container"
+  return show ? <div onClick={handleOverlayClick} className="base-modal fixed w-full h-full" {...other}>
+    <div className="base-modal__container"
       style={size ? {
         width: `${size}px`
       } : {}}
