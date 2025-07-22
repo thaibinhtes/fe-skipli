@@ -52,7 +52,7 @@ src/
 ## **Screenshots**
 
 ### Trang đăng nhập
-![Login Page](./screenshots/screenshot-login.jpg)
+![Login Page](./public/images/screenshot-login.jpg)
 
 ### Trang Dashboard
 ![Dashboard](./public/images/screenshot-admin.jpg)
