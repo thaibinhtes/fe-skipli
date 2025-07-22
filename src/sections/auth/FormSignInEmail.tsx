@@ -5,11 +5,11 @@ import { useState } from "react";
 import useAuthStore from "../../store/auth";
 import BaseLoading from "../../components/BaseLoading";
 
-type FormSignInEmailType = {
+type FormSignInEmailType = BaseCardProp & {
   email: string;
   onChangeEmail(email: string): void;
   onNext(): void;
-} & BaseCardProp
+}
 
 const FormSignInEmail = ({ email, onBack, onChangeEmail, onNext }: FormSignInEmailType) => {
   const [loading, setLoading] = useState(false)

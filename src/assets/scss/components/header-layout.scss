@@ -10,4 +10,26 @@
   &__container {
     padding: 41px 72px 51.55px 0;
   }
+
+  &__item-menu:hover {
+    & ul.menu {
+      display: block;
+    }
+  }
+
+  &__menu-user {
+    z-index: 998;
+    display: none;
+    border: 1px solid #e2e2e2;
+
+    & li {
+      padding: 7px 25px;
+
+      &:hover {
+        background-color: $btn-bg-out-primary;
+        color: $btn-color-out-primary;
+      }
+    }
+  }
+
 }

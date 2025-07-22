@@ -30,6 +30,18 @@ const SignInView = () => {
     setStep(step + 1)
   }
 
+  const onNextVerifyPhone = () => {
+    setStep(step + 1)
+  }
+
+  const onBackStep = () => {
+    const prevStep = step - 1;
+    if (prevStep < 1) setTypeForm(null)
+
+    setStep(prevStep < 1 ? 1 : prevStep)
+  }
+
+
   useEffect(() => {
     const type = searchParams.get('type')
 
@@ -41,26 +53,27 @@ const SignInView = () => {
   const FormContent = useMemo(() => {
     if (step === 1) {
       switch (typeForm) {
-      case 'phone':
-        return <FormSignInPhone
-          phone={data.phone}
-          onChangePhone={(value: string) => onChangePhone(value)}
-          onSubmit={onNextVerifyPhone}
-          onBack={onBackStep}
-        />
-        break;
-      case 'email': return <FormSignInEmail
-        email={data.email}
-        onChangeEmail={(email: string) => onChangeEmail(email)}
-        onBack={onBackStep}
-        onNext={onNextVerifyEmail}
-      />
-        break;
-      default:
-        return <FormSignIn
-          sinIn={(type: TYPE_SEND_OTP) => setTypeForm(type)}
-        />
-        break;
+        case 'phone':
+          return <FormSignInPhone
+            phone={data.phone}
+            onChangePhone={(value: string) => onChangePhone(value)}
+            onSubmit={onNextVerifyPhone}
+            onBack={onBackStep}
+          />
+          break;
+        case 'email':
+          return <FormSignInEmail
+            email={data.email}
+            onChangeEmail={(email: string) => onChangeEmail(email)}
+            onNext={onNextVerifyEmail}
+            onBack={onBackStep}
+          />
+          break;
+        default:
+          return <FormSignIn
+            sinIn={(type: TYPE_SEND_OTP) => setTypeForm(type)}
+          />
+          break;
       }
     }
     else return typeForm ? <FormVerifyOTP
@@ -78,16 +91,6 @@ const SignInView = () => {
     })
   }
 
-  const onNextVerifyPhone = () => {
-    setStep(step + 1)
-  }
-
-  const onBackStep = () => {
-    const prevStep = step - 1;
-    if (prevStep < 1) setTypeForm(null)
-
-    setStep(prevStep < 1 ? 1 : prevStep)
-  }
 
   return <section className="sign-in w-full">
     <div className="sign-in__container m-auto">

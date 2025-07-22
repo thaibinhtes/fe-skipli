@@ -10,6 +10,7 @@ Clone dự án về máy:
 ```bash
 git clone https://github.com/thaibinhtes/fe-skipli
 cd fe-skipli
+copy .env.example .env
 ```
 
 ## **Cài đặt dependencies**
@@ -34,6 +35,7 @@ npm run build
 ```
 
 ## **Cấu trúc thư mục**
+```bash
 src/
   assets/        # Chứa file SCSS, ảnh, icon
   components/    # Component tái sử dụng
@@ -45,5 +47,12 @@ src/
   utils/         # Định nghĩa các function dùng global
   App.tsx
   main.tsx
+```
 
+## **Screenshots**
 
+### Trang đăng nhập
+![Login Page](./screenshots/screenshot-login.jpg)
+
+### Trang Dashboard
+![Dashboard](./public/images/screenshot-admin.jpg)
